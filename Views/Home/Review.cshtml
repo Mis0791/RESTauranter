@@ -1,0 +1,12 @@
+@model List<RESTauranter.Models.Rest>
+
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+@foreach (var r in Model){
+    <p>Review for: @r.RestName | Stars: @r.Rating</p>
+    <p>Reviewer: @r.Name, @r.DateofVisit</p>
+    <p>@r.Review</p>
+    <hr>
+}

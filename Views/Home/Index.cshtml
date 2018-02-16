@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Add a Review";
+}
+
+@model RESTauranter.Models.Rest
+
+<div>
+    <h1>Write a Review:</h1>
+    <br>
+    <form action="addReview" method="POST">
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+        <span asp-validation-for="Name"></span>
+        <br>
+
+        <label asp-for="RestName"></label>
+        <input asp-for="RestName">
+        <span asp-validation-for="RestName"></span>
+        <br>
+
+        <label asp-for="Review"></label>
+        <input asp-for="Review">
+        <span asp-validation-for="Review"></span>
+        <br>
+
+        <label asp-for="Rating"></label>
+        <select asp-for="Rating">
+            <option value="Select a rating" hidden></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <span asp-validation-for="Rating"></span>
+        <br>
+
+        <label asp-for="DateofVisit"></label>
+        <input asp-for="DateofVisit" type="date">
+        <span asp-validation-for="DateofVisit"></span>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit Review">
+    </form>
+</div>
